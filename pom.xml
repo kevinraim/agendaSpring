@@ -11,12 +11,9 @@
 	<groupId>com.agenda</groupId>
 	<artifactId>AgendaSpring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>AgendaSpring</name>
 	<description>Agenda web hecha con spring</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
