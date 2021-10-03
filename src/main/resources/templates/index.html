@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row mt-5 ml-3 mr-3">
+            <div class="col-10">
+                <h1 class="text-left text-gray-800">Agenda de turnos</h1>
+                <p class="text-gray-800 description">Gestioná los turnos de tus clientes desde acá</p>
+            </div>
+
+            <div class="col-2 text-right mt-5">
+              <a th:href="@{/logout}">
+                <button type="button" class="btn btn-secondary">Cerrar sesión<i class="fa fa-sign-out ml-2" aria-hidden="true"></i></button>
+              </a>
+            </div>
+        </div>
+        
+
+        <div class="agenda_conteiner ml-3 mr-3 mt-3 pb-3">
+
+            <div class="col-12 table_title_conteiner card-header d-flex justify-content-between">
+                <h3 class="text-primary">Agenda</h3>
+
+                <form class="form-inline" onsubmit="return false">
+                  <input class="form-control mr-sm-2" id="inputBuscarNombre" type="search" placeholder="Nombre..." aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="buscarPorNombre()">Buscar</button>
+                </form>
+            </div>
+
+            <div class="col-12 mt-4">
+                <table class="table table-bordered" id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Telefono</th>
+                            <th>Precio</th>
+                            <th>Fecha</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                      
+                    </tbody>
+              </table>
+            </div>
+
+            <h3 class="text-center mb-2 text-gray-800 mt-5">Añadir cliente</h2>
+
+            <form>
+                <div class="form-row m-3">
+                  <div class="col">
+                    <input id="inputNombre" type="text" class="form-control" placeholder="Nombre">
+                  </div>
+                  <div class="col">
+                    <input id="inputEmail" type="text" class="form-control" placeholder="Email">
+                  </div>
+                  <div class="col">
+                    <input id="inputTelefono" type="text" class="form-control" placeholder="Telefono">
+                  </div>
+                  <div class="col">
+                    <input id="inputPrecio" type="text" class="form-control" placeholder="Precio">
+                  </div>
+                  <div class="col">
+                    <input id="inputFecha" type="date" class="form-control" placeholder="Fecha">
+                  </div>
+                  <button class="btn btn-success float-right" onclick="agregarCliente()">  Añadir  </button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script th:src="@{/js/controllerIndex.js}"></script>
+</body>
+</html>

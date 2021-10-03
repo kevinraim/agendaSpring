@@ -1,0 +1,33 @@
+body{
+    background-color: #ececec;
+}
+
+h1{
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+}
+
+.description{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+}
+
+.agenda_conteiner{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.table_title_conteiner{
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+th{
+    border-radius: 10px;
+}
+
+.login_conteiner{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
