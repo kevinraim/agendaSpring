@@ -22,7 +22,7 @@ public class UsuarioDaoImp implements UsuarioDao{
 	
 	@Override
 	public Usuario getByUsername(String username) {
-		return em.createQuery("FROM Usuario WHERE username='"+ username + "'", Usuario.class).getSingleResult();
+			return em.createQuery("FROM Usuario WHERE username='"+ username + "'", Usuario.class).getResultList().stream().findFirst().orElse(null);
 	}
 
 	@Override

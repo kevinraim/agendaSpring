@@ -33,6 +33,11 @@
                       <label for="exampleInputPassword1">Contraseña</label>
                       <input type="password" class="form-control" id="inputPassword" placeholder="Ingrese una contraseña">
                     </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPasswordRepeat">Repita la contraseña</label>
+                        <input type="password" class="form-control" id="inputPasswordRepeat" placeholder="Ingrese nuevamente su contraseña">
+                    </div>
                     
                     <button type="button" class="btn btn-success mx-auto d-block m-3" onclick="registrarUsuario()">Registrarse</button>
                     <a th:href="@{login}"><p class="text-center">Ingresar</p></a>

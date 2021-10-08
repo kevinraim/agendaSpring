@@ -97,6 +97,10 @@ async function actualizarCliente(id){
 async function buscarPorNombre(){
   let clienteNombre = document.getElementById('inputBuscarNombre').value;
 
+  if(clienteNombre == ""){
+    cargarClientes();
+  }
+
   const request = await fetch('/api/agenda/?nombre='+clienteNombre, {
     method: 'GET',
     headers: {
