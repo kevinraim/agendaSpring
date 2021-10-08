@@ -1,11 +1,11 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
 
-  cargarUsarios();
+  cargarClientes();
 
 });
 
-async function cargarUsarios(){
+async function cargarClientes(){
 
   const request = await fetch('/api/agenda/all/fecha', {
     method: 'GET',
@@ -96,6 +96,10 @@ async function actualizarCliente(id){
 
 async function buscarPorNombre(){
   let clienteNombre = document.getElementById('inputBuscarNombre').value;
+
+  if(clienteNombre == ""){
+    cargarClientes();
+  }
 
   const request = await fetch('/api/agenda/?nombre='+clienteNombre, {
     method: 'GET',
