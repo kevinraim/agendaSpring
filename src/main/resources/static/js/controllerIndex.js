@@ -1,11 +1,11 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
 
-  cargarUsarios();
+  cargarClientes();
 
 });
 
-async function cargarUsarios(){
+async function cargarClientes(){
 
   const request = await fetch('/api/agenda/all/fecha', {
     method: 'GET',
